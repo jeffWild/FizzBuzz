@@ -5,7 +5,32 @@ public class FizzBuzz {
     For numbers which are multiples of both three and five print “FizzBuzz”.
      */
 
-    public String print() {
-        return "test";
+    enum FizzBuzzEnum {
+        Fizz, Buzz, FizzBuzz;
     }
+
+    public String print(int number) {
+
+        String output;
+        if (estMultipleDeTrois(number) && estMultipleDeCinq(number)) {
+            output = FizzBuzzEnum.FizzBuzz.name();
+        } else if (estMultipleDeTrois(number)) {
+            output = FizzBuzzEnum.Fizz.name();
+        } else if (estMultipleDeCinq(number)) {
+            output = FizzBuzzEnum.Buzz.name();
+        } else {
+            output = Integer.toString(number);
+        }
+
+        return output;
+    }
+
+    private boolean estMultipleDeTrois(int number) {
+        return (number % 3 == 0);
+    }
+
+    private boolean estMultipleDeCinq(int number) {
+        return (number % 5 == 0);
+    }
+
 }
