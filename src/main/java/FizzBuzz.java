@@ -6,6 +6,6 @@ public class FizzBuzz {
      */
 
     public String print() {
-        return "test";
+        return "1";
     }
 }

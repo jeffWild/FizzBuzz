@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 class FizzBuzzTest {
 
     @Test
-    void test_exemple() {
+    void doit_retourner_1() {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("test", fizzBuzz.print());
+        assertEquals("1", fizzBuzz.print());
     }
 
 }
