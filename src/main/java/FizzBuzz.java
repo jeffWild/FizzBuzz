@@ -7,10 +7,17 @@ public class FizzBuzz {
 
     enum FizzBuzzEnum {
         Fizz, Buzz, FizzBuzz;
+
     }
 
-    public String print(int number) {
+    public static void main(String args[]) {
+        int size = 100;
+        for (int i = 1; i <= size; i++) {
+            System.out.println(print(i));
+        }
+    }
 
+    public static String print(int number) {
         String output;
         if (estMultipleDeTrois(number) && estMultipleDeCinq(number)) {
             output = FizzBuzzEnum.FizzBuzz.name();
@@ -25,11 +32,11 @@ public class FizzBuzz {
         return output;
     }
 
-    private boolean estMultipleDeTrois(int number) {
+    private static boolean estMultipleDeTrois(int number) {
         return (number % 3 == 0);
     }
 
-    private boolean estMultipleDeCinq(int number) {
+    private static boolean estMultipleDeCinq(int number) {
         return (number % 5 == 0);
     }
 
